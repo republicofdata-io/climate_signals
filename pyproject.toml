@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "climate-signals"
+version = "0.0.1"
+description = "A package for harvesting enviromental signals worldwide."
+authors = ["Olivier Dupuis <odupuis@lantrns.co>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+pandas = "^1.5.3"
+requests = "^2.31.0"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.4.3"
+ipykernel = "^6.26.0"
+python-dotenv = {extras = ["cli"], version = "^1.0.0"}
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+pre-shell = "python -m dotenv"
